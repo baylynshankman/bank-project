@@ -1,0 +1,16 @@
+The most challenging part was when I was working on the deserialize() function and needed to add the BankAccount
+pointers back into accts. I had lots of repetitive code between the if/else if conditions. Gordie told me that I 
+needed to move some of my work to before the code breaks into if/else if, which would save a lot of space. Before that, 
+I had each if/else if condition making its own set of parameters to feed into the construtors which wasted a lot of
+space. Because this strategy was using a lot of excess code, I was also making a lot of mistakes that would have 
+taken a while to sort out. Doing the work before the program splits streamlined my process a lot more and allowed 
+me to have a clearer code without errors. 
+
+We need serialization for a couple reasons. We can easily pick up where we left off on a new work day. It's also 
+very annoying to have to retype in a lot of data, especially if you're doing really important experiments that are
+time-sensitive, such as testing a bomb. People don't have time to waste doing excess work retyping data when a 
+program can just store it! Plus, if people have to retype the data every single time, and if you're working to make
+a bomb, or some other important scientific material, there is NO room for error. The more data you have to type in,
+the higher the chance of human error, and this can be extremely disastrous, especially if you're creating a bomb. 
+One person could type 0.0000000000001 instead of 0.0000000000011, and that could cause us to accidentally blow up
+another country and cause World War 3! But the chances of this go down exponentially if we just serialize our data!

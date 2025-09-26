@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/bank_app.dir/app/main.cpp.o -o bank_app  accounts/libaccounts.a utils/libutils.a 

@@ -1,0 +1,45 @@
+Testing objective: check if serialization functions are working properly. We will first make accounts, then call
+different functions on them, then utilize the serialization functions and compare the results with our expected 
+output. 
+
+Making Accounts:
+1. Select option 1 to make a savings account. Use the following parameters:     
+    username: baylynshankman
+    first name: baylyn
+    last name: shankman
+    account type: savings
+    interest rate: 0.3
+2. Then select option 1 again to make a checking account. Use the following parameters:
+    username: gordienovak
+    first name: gordie
+    last name: novak
+    account type: checking
+3. Perform the following actions:
+    a. Select option 2 to make a deposit. then type in baylynshankman for the username and deposit $50.00.
+    b. Select option 2 again to deposit to gordienovak account with amount $30.00
+    c. Select option 5 to accrue interest. 
+    d. Select option 6 to write a check, written by gordienovak, baylynshankman will cash the check, for amount $10.00
+    e. Select option 4 and type baylynshankman to display the account info. 
+        The output should read: Savings Account Balance: $75.000000, Interest Rate: 0.300000
+    f. Select option 4 again and type gordinovak to display the other account's info. 
+        The output should read: Checking Account Balance: $20.000000, wrote 1 checks
+    The output from sections e and f are our expected output for the next step called "check if successful"
+    g. Select option 0 to exit the program. 
+    We did all these steps so we can call all the functions in the options menu to make sure the serialization
+    works after having lots of functions called on accounts, and not just for accounts with $0.00.
+
+
+Check if successful: 
+Now we will run the program again to check if the serialization functions worked. 
+1. Compile and run the program again (inside the build folder, type "make" in the terminal, then cd into src from
+    build and type "./bank_app).
+2. Select option 4 to display an account's info. Type baylynshankman for the username. 
+    The output should give us the same line from section e of the previous step (expected output):
+    Savings Account Balance: $75.000000, Interest Rate: 0.300000
+3. Now select option 4 again, with gordienovak for the username.
+    The output should give us the same line from section f of the pervious step (expected output): 
+    Checking Account Balance: $20.000000, wrote 1 checks
+If these outputs match our expected outputs, then we can currently believe that our serialization functions are 
+working. If these outputs do not don't match the expected output, then the issue is one of two things:
+the math in our deposit, withdrawal, writeCheck, etc. functions is wrong, or the program can't find the account 
+names when serialize() or deserialize() is called on them. 

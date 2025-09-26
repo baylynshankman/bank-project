@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/bank_account_tests.dir/BankAccountTests.cpp.o CMakeFiles/bank_account_tests.dir/CheckingAccountTests.cpp.o CMakeFiles/bank_account_tests.dir/SavingsAccountTests.cpp.o -o bank_account_tests  ../src/accounts/libaccounts.a ../src/utils/libutils.a ../src/accounts/libaccounts.a /usr/lib64/libboost_unit_test_framework.so 
